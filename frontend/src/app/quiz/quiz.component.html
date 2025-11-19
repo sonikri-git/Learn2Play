@@ -1,0 +1,66 @@
+<div class="quiz-page">
+  <div class="top-bar">
+    <button mat-button class="back-btn" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      Back to Upload
+    </button>
+  </div>
+
+  <div class="hero">
+    <h1>Generated Quiz</h1>
+    <p>These questions were generated from your latest uploaded file.</p>
+  </div>
+
+  <!-- Loading state -->
+  <mat-card class="quiz-card state-card" *ngIf="loading()">
+    <div class="state state-loading">
+      <mat-icon>hourglass_empty</mat-icon>
+      <p>Generating your quiz… this can take around a minute.</p>
+    </div>
+  </mat-card>
+
+  <!-- Error state -->
+  <mat-card class="quiz-card state-card error" *ngIf="error() && !loading()">
+    <div class="state state-error">
+      <mat-icon>error_outline</mat-icon>
+      <div>
+        <h3>Something went wrong</h3>
+        <p>{{ error() }}</p>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- Quiz questions -->
+  <mat-card
+    class="quiz-card"
+    *ngIf="!loading() && !error() && quiz().length"
+  >
+    <div class="quiz-header">
+      <h2>{{ quiz().length }} Question{{ quiz().length === 1 ? '' : 's' }}</h2>
+      <p>Use these as practice questions or to build a study set.</p>
+    </div>
+
+    <div class="question-list">
+      <div class="question-item" *ngFor="let q of quiz(); let i = index">
+        <div class="q-meta">
+          <span class="badge">{{ q.type || 'Question' }}</span>
+          <span class="q-number">Q{{ i + 1 }}</span>
+        </div>
+        <p class="q-text">
+          {{ q.question }}
+        </p>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- No questions -->
+  <mat-card
+    class="quiz-card state-card"
+    *ngIf="!loading() && !error() && !quiz().length"
+  >
+    <div class="state">
+      <mat-icon>help_outline</mat-icon>
+      <p>No questions were generated. Try uploading a different PDF.</p>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,20 @@
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="assets/hero-video.mp4" type="video/mp4" />
+</video>
+
+<div class="page">
+  <div class="upload-card">
+    <h2>Upload Study Material</h2>
+    <p class="subtitle">Drag & drop or select your file to upload</p>
+
+    <label class="upload-zone">
+   <input type="file" multiple (change)="onPick($event)" />
+
+      <p>📂 Drop file here or click to browse</p>
+    </label>
+
+    <button class="upload-btn" (click)="onUpload()">Upload</button>
+  </div>
+
+  <p class="footer">© 2025 Learn2Play • Capstone Project</p>
+</div>
