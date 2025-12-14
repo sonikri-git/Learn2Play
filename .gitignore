@@ -1,0 +1,12 @@
+# Java
+target/
+.classpath
+.project
+.settings/
+
+# Python
+venv-quiz/
+__pycache__/
+
+# OS
+.DS_Store

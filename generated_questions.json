@@ -1,0 +1,22 @@
+[
+  {
+    "type": "Short Answer",
+    "question": "What is Jetpack Compose?"
+  },
+  {
+    "type": "Short Answer",
+    "question": "What language is the toolkit written in?"
+  },
+  {
+    "type": "Short Answer",
+    "question": "What is a Modifier class?"
+  },
+  {
+    "type": "Short Answer",
+    "question": "What is the problem with text visibility?"
+  },
+  {
+    "type": "Short Answer",
+    "question": "What language is the guide available in?"
+  }
+]
