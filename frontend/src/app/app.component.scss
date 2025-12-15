@@ -1,0 +1,33 @@
+.quiz-container {
+  padding: 20px;
+  color: white;
+}
+
+.question-card {
+  background: #1e1e2f;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.back-btn {
+  background: #444;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  &:hover {
+    background: #666;
+  }
+}
+
+.raw-json {
+  background: black;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 20px;
+  overflow-x: scroll;
+}
