@@ -18,6 +18,4 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker images
-        run: |
-          cd learn2play-backend-ai
-          docker compose build
+        run: docker compose build
