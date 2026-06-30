@@ -1,7 +1,0 @@
-transformers
-torch
-sentencepiece
-pdfplumber
-pandas
-tqdm
-python-docx
